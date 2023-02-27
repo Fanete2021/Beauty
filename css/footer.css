@@ -1,0 +1,55 @@
+.contacts {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  margin: 0 20%;
+}
+.contacts .contacts__social-networks {
+  display: flex;
+  flex-basis: 40%;
+}
+.contacts .contacts__social-networks .social-networks__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border: 2px solid #66c05d;
+  border-radius: 45px;
+  cursor: pointer;
+}
+.contacts .contacts__social-networks .social-networks__image:not(:first-child) {
+  margin-left: 20px;
+}
+.contacts .contacts__address {
+  font-size: 14px;
+  font-weight: 700;
+  flex-basis: 30%;
+  text-align: center;
+}
+.contacts .contacts__requisites {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.contacts .contacts__requisites .phone {
+  margin-right: 40px;
+}
+
+.politics {
+  height: 64px;
+  background-color: #efefef;
+  text-align: center;
+}
+.politics .politics__content {
+  margin: 0 20%;
+  display: flex;
+  justify-content: space-between;
+}
+.politics .politics__content span,
+.politics .politics__content a {
+  line-height: 64px;
+  font-size: 12px;
+  color: #828282;
+}

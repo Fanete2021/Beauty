@@ -1,0 +1,65 @@
+@import 'variables';
+
+.contacts {
+    height: $contactsHeight;
+    display: flex;
+    align-items: center;
+    margin: 0 $contentIndentation;
+
+    .contacts__social-networks {
+        display: flex;
+        flex-basis: 40%;
+
+        .social-networks__image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            height: 45px;
+            border: 2px solid $colorAccent;
+            border-radius: 45px;
+            cursor: pointer;
+
+            &:not(:first-child) {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    .contacts__address {
+        font-size: 14px;
+        font-weight: 700;
+        flex-basis: 30%;
+        text-align: center;
+    }
+
+    .contacts__requisites {
+        flex-basis: 40%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+
+        .phone {
+            margin-right: 40px;
+        }
+    }
+}
+
+.politics {
+    height: $politicsHeight;
+    background-color: $colorGray;
+    text-align: center;
+
+    .politics__content {
+        margin: 0 $contentIndentation;
+        display: flex;
+        justify-content: space-between;
+
+        span,
+        a {
+            line-height: $politicsHeight;
+            font-size: 12px;
+            color: #828282;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.pages {
+  height: 50px;
+  background-color: #efefef;
+  text-align: center;
+}
+.pages a {
+  line-height: 50px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.pages a:not(:first-child) {
+  margin-left: 30px;
+}
+
+.info {
+  display: flex;
+  height: 120px;
+  justify-content: space-between;
+}
+.info .info__title,
+.info .info__contacts {
+  display: flex;
+  align-items: center;
+}
+.info .info__title {
+  margin-left: 20%;
+}
+.info .info__title .title__name {
+  margin-left: 20px;
+  font-weight: 700;
+  font-size: 36px;
+  color: #66c05d;
+}
+.info .info__contacts {
+  margin-right: 20%;
+}
+.info .info__contacts .connection {
+  margin-left: 40px;
+}

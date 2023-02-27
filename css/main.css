@@ -1,0 +1,167 @@
+.services {
+  height: 60px;
+  text-align: center;
+}
+.services a {
+  line-height: 60px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.services a:not(:first-child) {
+  margin-left: 30px;
+}
+
+.main-product {
+  height: 604px;
+  background-image: url(../images/mainProduct.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+}
+.main-product .main-product__name,
+.main-product .main-product__describe,
+.main-product .main-product__detailed {
+  position: absolute;
+  left: 20%;
+}
+.main-product .main-product__name {
+  margin: 0;
+  top: 192px;
+  font-weight: 700;
+  font-size: 48px;
+}
+.main-product .main-product__describe {
+  font-size: 14px;
+  top: 286px;
+  width: 308px;
+}
+.main-product .main-product__detailed {
+  top: 371px;
+  border: 2px solid white;
+}
+
+.products {
+  background-color: #efefef;
+  height: 610px;
+}
+.products .products__content {
+  padding: 80px 20% 0;
+}
+.products .content__title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.products .content__title .title__name {
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: 5px;
+}
+.products .content__title .title__logo {
+  margin-right: 30px;
+}
+.products .content__wrapper {
+  display: flex;
+  margin-top: 15px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.products .content__wrapper .wrapper__item {
+  width: 255px;
+  height: 370px;
+  background-color: white;
+  text-align: center;
+}
+.products .content__wrapper .wrapper__item .item__picture {
+  margin: 25px auto 20px;
+}
+.products .content__wrapper .wrapper__item .item__describe {
+  max-width: 195px;
+  margin: 0 auto 20px;
+  font-size: 14px;
+}
+.products .content__wrapper .wrapper__item .item__price {
+  font-weight: 700;
+  font-size: 21px;
+  letter-spacing: 0.05em;
+  margin: 0 0 20px;
+}
+.products .content__wrapper .wrapper__item .item__buy {
+  width: 130px;
+  height: 35px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 35px;
+  background-color: #66c05d;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.specials {
+  background-color: #efefef;
+  height: 244px;
+}
+.specials .specials__content {
+  display: flex;
+  margin: 0 20%;
+  justify-content: space-between;
+}
+.specials .content__wrapper {
+  background-color: #66c05d;
+  color: white;
+  width: 540px;
+  height: 212px;
+}
+.specials .content__wrapper .wrapper__info {
+  position: relative;
+}
+.specials .content__wrapper .wrapper__info .info__title {
+  position: absolute;
+  top: 35px;
+  left: 40px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.specials .content__wrapper .wrapper__info .info__description {
+  position: absolute;
+  top: 77px;
+  left: 40px;
+  width: 231px;
+  font-size: 14px;
+}
+.specials .content__wrapper .wrapper__info .info__description p {
+  margin: 0;
+}
+.specials .content__wrapper .wrapper__info .info__input,
+.specials .content__wrapper .wrapper__info .info__button {
+  position: absolute;
+  top: 142px;
+  left: 40px;
+}
+.specials .content__wrapper .wrapper__info .info__input input {
+  border-radius: 30px;
+  max-width: 225px;
+  height: 35px;
+  text-align: left;
+  border: none;
+  padding-left: 25px;
+}
+.specials .content__wrapper .wrapper__info .info__input input:focus {
+  outline: none;
+}
+.specials .content__wrapper .wrapper__info .info__button {
+  width: 170px;
+  height: 35px;
+  border: 2px solid white;
+  border-radius: 30px;
+  text-align: center;
+  line-height: 35px;
+  cursor: pointer;
+}
+.specials .content__wrapper .wrapper__info img {
+  position: absolute;
+  right: 45px;
+  top: 53px;
+}

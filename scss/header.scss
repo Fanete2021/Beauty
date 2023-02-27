@@ -1,0 +1,48 @@
+@import 'variables';
+
+.pages {
+    height: $pagesHeight;
+    background-color: $colorGray;
+    text-align: center;
+
+    a {
+        line-height: $pagesHeight;
+        font-size: 14px;
+        font-weight: 700;
+
+        &:not(:first-child) {
+            margin-left: 30px;
+        }
+    }
+}
+
+.info {
+    display: flex;
+    height: $infoHeight;
+    justify-content: space-between;
+
+    .info__title,
+    .info__contacts {
+        display: flex;
+        align-items: center;
+    }
+
+    .info__title {
+        margin-left: $contentIndentation;
+
+        .title__name {
+            margin-left: 20px;
+            font-weight: 700;
+            font-size: 36px;
+            color: $colorAccent;
+        }
+    }
+
+    .info__contacts {
+        margin-right: $contentIndentation;
+
+        .connection {
+            margin-left: 40px;
+        }
+    }
+}

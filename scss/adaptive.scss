@@ -1,0 +1,363 @@
+@import 'variables';
+
+@mixin adaptMainByIndentation($contentIndentation) {
+    .products .products__content {
+        padding: 80px $contentIndentation 0;
+    }
+
+    .specials .specials__content {
+        margin: 0 $contentIndentation;
+    }
+
+    .main-product {
+        .main-product__name,
+        .main-product__describe,
+        .main-product__detailed {
+            left: $contentIndentation;
+        }
+    }
+}
+
+@mixin adaptFooterByIndentation($contentIndentation) {
+    .contacts {
+        margin: 0 $contentIndentation;
+    }
+
+    .politics .politics__content {
+        margin: 0 $contentIndentation;
+    }
+}
+
+@media (max-width: 1820px) {
+    .specials .specials__content .content__wrapper {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 1720px) {
+    $contentIndentation: 15%;
+
+    @include adaptMainByIndentation($contentIndentation);
+
+    .contacts {
+        margin: 0 $contentIndentation;
+    }
+}
+
+@media (max-width: 1500px) {
+    @include adaptMainByIndentation(10%);
+    @include adaptFooterByIndentation(10%);
+}
+
+@media (max-width: 1300px) {
+    @include adaptMainByIndentation(5%);
+}
+
+@media (max-width: 1170px) {
+    .products {
+        height: 930px;
+
+        .products__content .content__wrapper {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .wrapper__item {
+                width: 33.4%;
+                margin: 0 10px 10px;
+            }
+        }
+    }
+
+    @include adaptFooterByIndentation(5%);
+}
+
+@media (max-width: 1120px) {
+    .specials .specials__content .content__wrapper {
+        margin: 0 10px 0;
+    }
+
+    .contacts {
+        height: $contactsHeight;
+        flex-wrap: wrap;
+
+        .contacts__social-networks {
+            flex-basis: 50%;
+            justify-content: center;
+        }
+
+        .contacts__address {
+            flex-basis: 50%;
+            justify-content: center;
+        }
+
+        .contacts__requisites {
+            flex-basis: 100%;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    $contentIndentation: 5%;
+
+    .info {
+        .info__title {
+            margin-left: $contentIndentation;
+        }
+
+        .info__contacts {
+            margin-right: $contentIndentation;
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    .politics {
+        height: $politicsHeight * 1.5;
+
+        .politics__content {
+            flex-wrap: wrap;
+
+            span,
+            a {
+                flex-basis: 100%;
+                height: $politicsHeight / 2;
+            }
+
+            span {
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 690px) {
+    .info {
+        flex-wrap: wrap;
+        height: $infoHeight * 1.25;
+        justify-content: space-between;
+
+        .info__title,
+        .info__contacts {
+            flex-basis: 100%;
+            justify-content: center;
+        }
+
+        .info__title {
+            margin-left: 0;
+        }
+
+        .info__contacts {
+            margin-right: 0;
+
+            .phone {
+                margin-left: 30px;
+            }
+        }
+    }
+
+    .services {
+        height: $servicesHeight * 2;
+        display: flex;
+        flex-wrap: wrap;
+
+        a {
+            flex-basis: 33.3%;
+
+            &:not(:first-child) {
+                margin-left: 0px;
+            }
+        }
+    }
+
+    .specials {
+        height: 450px;
+
+        .specials__content {
+            flex-direction: column;
+            justify-content: center;
+
+            .content__wrapper {
+                margin: 0 auto 10px;
+            }
+        }
+    }
+
+    .main-product {
+        height: 300px;
+        background-size: 1000px auto;
+
+        .main-product__name,
+        .main-product__describe,
+        .main-product__detailed {
+            position: absolute;
+            left: 5%;
+        }
+
+        .main-product__name {
+            top: 20px;
+            font-size: 30px;
+        }
+
+        .main-product__describe {
+            font-size: 12px;
+            top: 100px;
+            width: 180px;
+        }
+
+        .main-product__detailed {
+            top: 180px;
+        }
+    }
+
+    .products {
+        height: 860px;
+
+        .products__content {
+            padding-top: 10px;
+
+            .content__title {
+                .title__name {
+                    font-size: 18px;
+                    margin-top: 15px;
+                }
+
+                .title__logo {
+                    margin-right: 0;
+                    height: 40px;
+                }
+            }
+        }
+    }
+
+    .contacts {
+        height: $contactsHeight * 1.5;
+        flex-wrap: wrap;
+
+        .contacts__social-networks,
+        .contacts__address {
+            flex-basis: 100%;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    @include adaptMainByIndentation(2.5%);
+
+    .products .products__content {
+        padding-top: 10px;
+    }
+
+    .specials .specials__content .content__wrapper {
+        width: 350px;
+    }
+
+    .pages {
+        height: $pagesHeight * 2;
+        display: flex;
+        flex-wrap: wrap;
+        color: red;
+
+        a {
+            flex-basis: 33.3%;
+
+            &:not(:first-child) {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-left: 33.3%;
+            }
+        }
+    }
+
+    .politics .politics__content {
+        span {
+            font-size: 8px;
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    .products {
+        height: 1610px;
+
+        .products__content .content__wrapper {
+            .wrapper__item {
+                width: 50.1%;
+            }
+        }
+    }
+
+    .politics .politics__content {
+        span {
+            font-size: 6px;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .phone {
+        font-size: 13px;
+    }
+
+    .connection,
+    .main-product__detailed {
+        width: 130px;
+        height: 35px;
+        line-height: 35px;
+        border-radius: 35px;
+        font-size: 12px;
+    }
+
+    .services {
+        height: $servicesHeight;
+
+        a {
+            line-height: $servicesHeight / 1.5;
+            font-size: 12px;
+        }
+    }
+
+    .products .products__content .content__title {
+        .title__name {
+            font-size: 15px;
+        }
+
+        .title__logo {
+            margin-top: 7.5px;
+            width: 100px;
+        }
+    }
+
+    .specials .specials__content .content__wrapper {
+        width: 300px;
+    }
+
+    .main-product {
+        height: 250px;
+        background-size: 800px auto;
+
+        .main-product__name,
+        .main-product__describe,
+        .main-product__detailed {
+            position: absolute;
+            left: 5%;
+        }
+
+        .main-product__name {
+            top: 20px;
+            font-size: 30px;
+        }
+
+        .main-product__describe {
+            font-size: 12px;
+            top: 100px;
+            width: 180px;
+        }
+
+        .main-product__detailed {
+            top: 180px;
+        }
+    }
+}
